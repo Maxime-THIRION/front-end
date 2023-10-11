@@ -7,8 +7,7 @@
       </li>
     </ul>
   </div>
-  <router-link to="/articles2">Go to Article List 2</router-link>
-  <router-link to="/login">Login</router-link>
+  <router-link to="/articles">Go to Article List</router-link>
 </template>
 
 <script>
@@ -25,7 +24,7 @@ export default {
   },
   methods: {
     fetchArticles() {
-      api.get('/articles')
+      api.get('/articles2')
         .then((response) => {
           this.articles = response.data;
         })
@@ -58,7 +57,7 @@ ul {
 }
 
 .article-item {
-  background-color: #fff;
+  background-color: #b82c2c;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
